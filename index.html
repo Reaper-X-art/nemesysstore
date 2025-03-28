@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <style>
         body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
-            font-size: 3rem;
-            text-transform: uppercase;
+            flex-direction: column;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        button {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #fff;
+            color: #000;
         }
     </style>
 </head>
 <body>
-    <div>Coming Soon</div>
-    <p>We are currently performing maintenance</p>
-    <p>Official Release Date: 28.4.25</p>
+    <h1>Coming Soon</h1>
+    <p>We need to do some Maintenance work</p>
+    <button onclick="showReleaseDate()">Release-Datum anzeigen</button>
+    <p id="release-date" style="display: none; margin-top: 20px; font-size: 1.5em;">Release am 28. April 2025</p>
+
+    <script>
+        function showReleaseDate() {
+            document.getElementById('release-date').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
